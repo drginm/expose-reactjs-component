@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import RegularComponent from './components/RegularComponent';
+import FunctionalComponent from './components/FunctionalComponent';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         >
           Learn React
         </a>
+        <RegularComponent ref={(regularComponent) => {window.regularComponent = regularComponent}}/>
+        <FunctionalComponent ref={(functionalComponent) => {window.functionalComponent = functionalComponent}}/>
       </header>
     </div>
   );
